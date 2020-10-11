@@ -1,5 +1,10 @@
 # YU-Mongolian (Metafont)
 
+## Mongolian alphabet font
+![Sample](./images/sample.png "Sample")  
+
+![Glyphs](./images/glyphs.png "Glyphs")
+
 ## Files
 
 - Parameter file:  
@@ -22,9 +27,15 @@
 $ mf-nowin "\input yumongol10"  
 $ gftodvi yumongol10  
 $ dvipdfmx yumongol10  
+```
 
 ## Make a sample pdf file
+```
 $ mf-nowin "\mode=localfont; input yumongol10"  
 $ gftopk yumongol10.600gf  
 $ (echo 'yumongol10'; echo '\sample'; echo '\end') | luatex testfont  
+```
 
+![Encoding table](./images/encoding.png "Encoding table")
+
+ 
