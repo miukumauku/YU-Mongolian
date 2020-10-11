@@ -1,0 +1,489 @@
+%%%
+%%% YU-Mongolian alphabet 
+%%%  Base file
+%%% 
+%%% (c) 1994 and 2020 @miukumauku_
+%%% 
+
+yumonbase:=1;  % when |yumonbase| is known, this file has been input
+
+if unknown cmbase: input cmbase fi
+
+let monchar=\; % `|monchar|' should precede each character
+
+def openit = openwindow currentwindow
+% from origin to (screen_rows,screen_cols) at (-50,300) enddef;
+ from origin to (800,500) at (-60,400)
+enddef;
+
+def stopping =
+  stop "stopping!";
+enddef;
+
+if known stoppin:
+  extra_endchar := extra_endchar & "stopping";
+fi
+
+def guidelines =
+  hh:=asc_height;
+  pickup pencircle scaled 1pt#;
+  for ht:=1 upto 10:
+    draw (0,hh*ht/10)--(w,hh*ht/10);
+  endfor;
+enddef;
+
+vardef n_ceg(expr offset) =
+  begingroup;
+    save x,y;
+    pos1(tiny,-45); pos2(stem,-90);
+    x1=offset; y1=-.2desc_depth;
+    x2=x1+1.5stem; bot y2=.07h;
+    filldraw stroke z2e..z1;
+  endgroup;
+enddef;
+
+vardef g_ceg(expr xoffset,yoffset) =
+  begingroup;
+    save x,y;
+    pos1(tiny,-45); pos2(stem,-90);
+    x1=xoffset; y1=-.5u+yoffset;
+    x2=x1+1.5stem; bot y2=.7u+yoffset;
+    filldraw stroke z2e..z1; % small ceg
+    pos3(tiny,-45); pos4(stem,-90);
+    x3=x1-.3u; y3=-2.5u+yoffset;
+    x4=x3+2.5stem; bot y4l=y1-.2u;
+    filldraw stroke z4e..z3; % large ceg
+    penlabels(1,2,3,4);
+  endgroup;
+enddef;
+
+vardef titem =
+  % width: 8u
+  begingroup;
+    save x,y;
+    pos1(tiny,-70); pos2(stem,45); pos3(stem,0); pos4(tiny,0);
+    lft x1l=0; y1=y2-u;
+    x2=x1+2u; top y2l=.8h;
+    x3=5u; y3=.5h;
+    x4=x3-u; bot y4=.2h;
+    filldraw stroke z1..z2e..z3e..z4;
+    pos5(stem,-90); pos6(stem,-90);
+    lft x5=lft x3; y5=y3;
+    rt x6=8u; y6=y5;
+    filldraw stroke z5e--z6e;
+    penlabels(1,2,3,4,5,6);
+  endgroup;
+enddef;
+
+vardef shud(expr offset) =
+  % width: 3u
+  begingroup;
+    save x,y;
+    pos1(stem,-90); pos2(stem,-90);
+    lft x1=offset; y1=.5h;
+    rt x2=x1+3u; y2=y1;
+    filldraw stroke z1e--z2e;
+    pos3(stem,0); pos4(tiny,0);
+    lft x3r=x1+.5u; top y3=top y1l;
+    x4=x3; bot y4=.2h;
+    filldraw stroke z3e--z4;
+    penlabels(1,2,3,4);
+  endgroup;
+enddef;
+
+vardef shilbe(expr offset) =
+  % width: 7u
+  begingroup;
+    save x,y;
+    pos1(stem,-90); pos2(stem,-90);
+    lft x1=offset; y1=.5h;
+    rt x2=x1+7u; y2=y1;
+    filldraw stroke z1e--z2e;
+    pos3(.4stem,-90); pos4(.5stem,-120); pos5(.7stem,-180);
+    x3=x1; top y3=lft y1l;
+    x4=.5[x3,x5]+u; y4=.5[y3,y5];
+    x5=x1+4.8u; bot y5=0;
+    filldraw stroke z3e..z4e..z5e;
+    penlabels(1,2,3,4,5);
+  endgroup;
+enddef;
+
+vardef gedes(expr offset) =
+  % width: 7u
+  begingroup;
+    save x,y;
+    pos1(stem,-90); pos2(stem,-90);
+    lft x1=offset; y1=.5h;
+    rt x2=x1+7u; y2=.5h;
+    filldraw stroke z1e--z2e;
+    pos3(tiny,180); pos4(stem,-90); pos5(tiny,0);
+    lft x3r=offset; top y3=lft y1l;
+    x4=.5[x3,x5]; bot y4=.1h;
+    x5=offset+5.4u; top y5=lft y1l;
+    filldraw stroke z3e{down}..z4e..{up}z5e;
+    labels(1,2,3,4,5,6);
+  endgroup;
+enddef;
+
+vardef suul(expr offset) =
+  % width: 8u
+  begingroup;
+    save x,y;
+    pos1(stem,-90); pos2(stem,-90);
+    lft x1=offset; y1=.5h;
+    x2=offset+2.4u; y2=y1;
+    filldraw stroke z1e--z2e;
+    pos3(2tiny,-135); pos4(2tiny,-135);
+    x3=x2; y3=y2;
+    x4=offset+4.8u; bot y4=0;
+    filldraw stroke z3e--z4e;
+    pos5(2tiny,-45); pos6(1.2stem,-30); pos7(tiny,0);
+    x5=x4; y5=y4;
+    rt x6r=offset+8u; y6=h;
+    x7=offset+6.8u; top y7l=1.2h;
+    filldraw stroke z5e{up}..z6e--z7;
+    penlabels(1,2,3,4,5,6,7);
+  endgroup;
+enddef;
+
+vardef suul_mini(expr offset) =
+  begingroup;
+    save x,y;
+    pos1(stem,-90); pos2(stem,-90);
+    lft x1=offset; y1=.5h;
+    x2=x1+2.7u; y2=y1;
+    filldraw stroke z1e--z2e;
+    pos3(2tiny,-135); pos4(2tiny,-135);
+    x3=x2; y3=y2;
+    x4=x1+5.4u; bot y4=0;
+    filldraw stroke z3e--z4e;
+    pos5(2tiny,-45); pos6(stem,-30); pos7(tiny,0);
+    x5=x4; y5=y4;
+    rt x6r=x1+8u; y6=.6h;
+    x7=x1+7u; top y7l=.9h;
+    filldraw stroke z5e{up}..z6e--z7;
+    penlabels(1,2,3,4,5,6,7);
+  endgroup;
+enddef;
+
+vardef caclaga(expr offset) =
+  begingroup;
+  save x,y;
+    pos1(stem,-90); pos2(stem,-90);
+    pos3(.7stem,-140); pos4(.6stem,-160); pos5(.7stem,-160);
+    pos6(.8stem,100); pos7(stem,100);
+    lft x1=offset; y1=.5h;
+    x2=offset+2u; y2=y1;
+    x3=x2+1.2u; y3=y2-u;
+    x4=.5[x3,x5]+.7u; y4=.5[y3,y5]+u;
+    rt x5l=offset+6u; y5=y6+1.5u;
+    x6=x5-u; y6=y7+.5u;
+    x7=x6-u; bot y7l=-d;
+    filldraw stroke z1e--z2e..z3e..z4e..z5e..z6e---z7e;
+
+    penlabels(1,2,3,4,5,6,7);
+  endgroup;
+enddef;
+
+vardef odoi_suul(expr offset) =
+  % width: 4u
+  begingroup;
+    save x,y;
+    pos1(stem,-90); pos2(stem,-90); pos3(tiny,90);
+    lft x1=offset; y1=.5h;
+    x2=offset+.4u; y2=y1;
+    rt x3l=offset+4u; bot y3=.1h;
+    filldraw stroke z1e--z2e{right}..{down}z3;
+    penlabels(1,2,3);
+  endgroup;
+enddef;
+
+vardef num(expr offset) =
+  begingroup;
+    save x,y;
+    pos1(stem,60); pos2(.4stem,0);
+    pos3(stem,-90); pos4(tiny,180);
+    x1=x2+3.6u; bot y1l=0;
+    lft x2l=offset; y2=.5h;
+    x3=offset+4u; top y3l=h;
+    rt x4l=offset+8u; y4=.4h;
+    filldraw stroke z1e--z2e..{right}z3e..{down}z4;
+    penlabels(1,2,3,4,5,6,7,8);
+  endgroup;
+enddef;
+
+vardef numtai_gedes(expr offset) =
+  begingroup;
+    save x,y;
+    pos1(stem,-90); pos2(stem,-90);
+    pos3(tiny,180); pos4(stem,90);
+    pos5(tiny,0); pos6(stem,-90);
+    pos7(tiny,180);
+    lft x1=offset; y1=.5h;
+    x2=offset+5u; y2=y1;
+    rt x3=rt x2; y3=y2;
+    x4=.5[x3,x5]; bot y4=.1h;
+    lft x5=offset; y5=y1;
+    x6=offset+3u; top y6l=h;
+    x7=offset+8u; bot y7=.4h;
+    filldraw stroke z1e--z2e--z3{down}..z4e..{up}z5{up}..z6e..{down}z7;
+    penlabels(1,2,3,4,5,6,7,8,9);
+  endgroup;
+enddef;
+
+vardef xewtee_qix =
+  % width: 7u 
+  begingroup;
+    save x,y;
+    pos1(stem,-45); pos2(stem,0); pos3(stem,80);
+    x1=x3+u; bot y1r=0;
+    x2=x3+1.5u; y2=.5[y3,y1];
+    rt x3l=0; y3=.45h;
+    filldraw stroke z1e..z2e..z3e;
+    pos4(tiny,30); pos5(stem,-90); pos6(tiny,180); pos7(tiny,180);
+    rt x4l=0; y4=.45h;
+    x5=4.5u; top y5l=h;
+    x6=5.6u; y6=.5h;
+    x7=x6-u; y7=.1h;
+    filldraw stroke z4{up}..z5e..z6e..z7;
+    pos8(stem,-90); pos9(stem,-90);
+    x8=x6; y8=y6;
+    rt x9=7u; y9=y8;
+    filldraw stroke z8e--z9e;
+    penlabels(1,2,3,4,5,6,7,8,9);
+  endgroup;
+enddef;
+
+vardef num_mini(expr offset) =
+  % width: 8u
+  begingroup;
+    save x,y;
+    pos1(.8stem,60); pos2(.2stem,0);
+    pos3(.8stem,-90); pos4(tiny,180);
+    x1=x2+2.6u; bot y1l=.15h;
+    lft x2l=offset; y2=.5h;
+    x3=.5[x2,x4]; top y3l=.85h;
+    rt x4l=offset+6u; y4=.5h;
+    filldraw stroke z1e..z2e..{right}z3e..{down}z4;
+    penlabels(1,2,3,4);
+  endgroup;
+enddef;
+
+vardef m_ewer(expr xoffset,yoffset) =
+  begingroup;
+    save x,y;
+    pos1(.5tiny,0); pos2(.5tiny,0);
+    x1=xoffset; y1=yoffset;
+    x2=x1-u; y2=y1+6u;
+    filldraw stroke z1e--z2e;
+    pos3(.7stem,-90); pos4(.5stem,-70); pos5(tiny,-60);
+    lft x3=lft x2l; top y3l=top y2;
+    x4=.6[x3,x5]; y4=y3-.1u;
+    x5=x3+3.5u; top y5=top y2+.4u;
+    filldraw stroke z3e..z4e..z5;
+    penlabels(1,2,3,4,5);
+  endgroup;
+enddef;
+
+vardef l_ewer(expr xoffset,yoffset) =
+  begingroup;
+    save x,y;
+    pos1(.5tiny,0); pos2(.5tiny,0);
+    x1=xoffset; y1=yoffset;
+    x2=x1+u; y2=y1+6u;
+    filldraw stroke z1e--z2e;
+    pos3(.7stem,90); pos4(.5stem,70); pos5(tiny,60);
+    rt x3=rt x2l; top y3r=top y2;
+    x4=.6[x3,x5]; y4=y3-.1u;
+    x5=x3-3.5u;
+    top y5=top y2+.4u;
+    filldraw stroke z3e..z4e..z5;
+    penlabels(1,2,3,4,5);
+  endgroup;
+enddef;
+
+vardef gedestei_shilbe =
+  % width: 8u
+  begingroup;
+    save x,y;
+    pos1(stem,-90); pos2(stem,-90);
+    lft x1=0; y1=.5h;
+    rt x2=8u; y2=.5h;
+    filldraw stroke z1e--z2e;
+    pos3(tiny,180); pos4(tiny,-90);
+    pos5(tiny,0); pos6(tiny,90); pos7(tiny,180); pos8(tiny,-90);
+    lft x3r=lft x1; y3=y1;
+    x4=5u; bot y4=0;
+    rt x5r=7u; y5=.5[y6,y4];
+    x6=x4; top y6r=.3h;
+    lft x7r=2x6-x5; y7=y5;
+    x8=x4; bot y8l=0;
+    filldraw stroke z3e{down}..{right}z4e..z5e..z6e..z7e..z8e;
+    labels(1,2,3,4,5,6,7,8);
+  endgroup;
+enddef;
+
+vardef exen_zawj =
+  % width: 10u
+  begingroup;
+    save x,y;
+    pos1(tiny,60); pos2(.6stem,120); pos3(.5stem,130); pos4(stem,90);
+    lft x1l=0; y1=y2+.5u;
+    x2=x1+1.3u; y2=.5h;
+    x3=.4[x2,x4]; y3=.2[y2,y4];
+    x4=x2+5.0u; top y4=h;
+    filldraw stroke z1..z2e..z3e--z4e;
+    pos5(.5stem,0); pos6(.5stem,0); pos7(stem,0); pos8(tiny,0);
+    x5=x4; y5=y4;
+    x6=x5+0.5u; y6=.5h;
+    lft x7l=lft x6l; y7=y6;
+    x8=x6; bot y8=.1h;
+    filldraw stroke z5e..z6e;
+    filldraw stroke z7e--z8;
+    pos9(stem,-90); pos10(stem,-90);
+    lft x9=lft x6; y9=y6;
+    rt x10=10u; y10=y9;
+    filldraw stroke z9e--z10e;
+    penlabels(1,2,3,4,5,6,7,8,9,10);
+  endgroup;
+enddef;
+
+vardef zawj =
+  % width: 7u
+  begingroup;
+    save x,y;
+    pos1(tiny,10); pos2(tiny,10);
+    x1=x2+u; bot y1l=.2h;
+    lft x2l=0; y2=.5h;
+    filldraw stroke z1..z2;
+    pos3(.5stem,-45); pos4(stem,-90);
+    lft x3l=0; y3=y2;
+    x4=x3+3u; top y4l=h;
+    filldraw stroke z3e..z4e;
+    pos5(stem,-130); pos6(tiny,-130);
+    x5=x4; top y5l=h;
+    x6=x5+u; y6=.5h;
+    filldraw stroke z5e..z6;
+    pos7(stem, -90); pos8(stem,-90);
+    x7=x6; y7=.5h;
+    rt x8=7u; y8=y7;
+    filldraw stroke z7e--z8e;
+    pos9(stem,0); pos10(tiny,0);
+    lft x9r=x7+.5u; top y9=top y7l;
+    x10=x9; bot y10=.2h;
+    filldraw stroke z9e--z10;
+    penlabels(1,2,3,4,5,6,7,8,9,10);
+  endgroup;
+enddef;
+
+vardef suuliin_zawj(expr offset) =
+  begingroup;
+    save x,y;
+    pos1(stem, -90); pos2(stem,-90);
+    x1=offset; y1=.5h;
+    rt x2=x1+u; y2=y1;
+    filldraw stroke z1e--z2e;
+
+    pos3(tiny,30); pos4(stem,70);
+    x3=x4+u; y3=.2h;
+    lft x4l=offset; y4=.5h;
+    filldraw stroke z3..z4e;
+
+    pos5(.5stem,-45); pos6(stem,-90);
+    lft x5l=offset; y5=y4;
+    x6=x5+3u; top y6l=h;
+    filldraw stroke z5e..z6e;
+    pos7(stem,-130); pos8(tiny,-130);
+    x7=x6; top y7r=h;
+    x8=x7+1.5u; y8=.2h;
+    filldraw stroke z7e..z8;
+    pos9(1.7stem,110); pos10(.7stem,110); pos11(tiny,90);
+    lft x9=lft x8; bot y9l=.2h;
+    x10=.5[x9,x11]-.2u; y10=.5[y9,y11]+u;
+    x11=x9+4u; y11=.9h;
+    filldraw stroke z9e..z10e..z11;
+    penlabels(1,2,3,4,5,6,7,8,9,10,11);
+  endgroup;
+enddef;
+
+vardef dawqar_cegtei(expr xoffset,yoffset) =
+  begingroup;
+    save x,y;
+    pos1(tiny,-45); pos2(stem,-90);
+    x1=xoffset-2.5u; y1=yoffset+.5u;
+    x2=x1+1.5stem; y2=y1+1.5u;
+    filldraw stroke z1..z2e;
+    pos3(tiny,-45); pos4(stem,-90);
+    x3=xoffset+1.5u; y3=yoffset;
+    x4=x3+1.5stem; y4=y3+1.5u;
+    filldraw stroke z3..z4e;
+    penlabels(1,2,3,4);
+  endgroup;
+enddef;
+
+vardef seree_ewer =
+  % width: 8u
+  begingroup;
+    save x,y;
+    pos1(stem,-90); pos2(stem,-90);
+    lft x1=0; y1=.5h;
+    rt x2=8u; y2=.5h;
+    filldraw stroke z1e--z2e;
+    pos3(tiny,-90); pos4(stem,-90); pos5(tiny,-120);
+    lft x3=0; bot y3r=.2u;
+    x4=3.2u; y4=y3+u;
+    x5=6u; bot y5r=0;
+    filldraw stroke z3..z4e..z5;
+    pos6(tiny,30); pos7(tiny,0); pos8(tiny,0);
+    x6=x5; y6=y5;
+    x7=x6-.2u; y7=.3[y8,y6];
+    x8=x7+.5u; y8=.5h;
+    filldraw stroke z6e..z7e..z8e;
+    labels(1,2,3,4,5,6,7,8);
+  endgroup;
+enddef;
+
+vardef etger_shilbe =
+  % width: 6u
+  begingroup;
+    save x,y;
+    % Nirughu
+    pos1(stem,-90); pos2(stem,-90);
+    lft x1=0; y1=.5h;
+    rt x2=6u; y2=y1;
+    filldraw stroke z1e--z2e;
+    % Egeteger silbi
+    pos3(.4stem,-90); pos4(.5stem,-120); pos5(.6stem,180); pos6(tiny,90);
+    x3=x1; top y3=lft y1l;
+    x4=.5[x3,x5]+u; y4=.5[y3,y5];
+    x5=w-1.2u; bot y5=0;
+    x6=x5-u; y6=y5-u;
+    filldraw stroke z3e..z4e..z5e..z6;
+    penlabels(1,2,3,4,5,6);
+  endgroup;
+enddef;
+
+vardef erweeljin_shilbe =
+  % width: 6u
+  begingroup;
+    save x,y;
+    % Nuruu
+    pos1(stem,-90); pos2(stem,-90);
+    lft x1=0; y1=.5h;
+    rt x2=6u; y2=y1;
+    filldraw stroke z1e--z2e;
+    % erweeljin silbi
+    pos3(.4stem,-90); pos4(.5stem,-120); pos5(.5stem,180); pos6(tiny,90);
+    x3=x1; top y3=lft y1l;
+    x4=.5[x3,x5]+u; y4=.5[y3,y5];
+    x5=w-1.2u; bot y5=0;
+    x6=x5-.5u; y6=y5-u;
+    filldraw stroke z3e..z4e..z5e..z6;
+    pos7(.5stem,-45); pos8(tiny,-30);
+    x7=x4-.5u; y7=y4;
+    x8=x7-u; y8=y7-3u;
+    filldraw stroke z7e..z8;
+    penlabels(1,2,3,4,5,6,7,8);
+  endgroup;
+enddef;
+

@@ -1,0 +1,481 @@
+%%%
+%%% YU-Mongolian alphabet
+%%%  Ligature glyphs
+%%% 
+%%% (c) 1994 and 2020 @miukumauku_
+%%%
+
+iff known mon_ba:
+monchar "ba (ligature)";
+beginchar(mon_ba,8u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  pos1(stem,-90); pos2(stem,-90);
+  pos3(tiny,180); pos4(stem,90);
+  pos5(tiny,0); pos6(stem,-90);
+  pos7(tiny,180);
+  lft x1=0; y1=.5h;
+  x2=.7w; y2=y1;
+  rt x3=rt x2; y3=y2;
+  x4=.5[x3,x5]; bot y4=.1h;
+  lft x5=0; y5=y1;
+  x6=.5w; top y6l=h;
+  x7=.9w; bot y7=.2h;
+  filldraw stroke z1e--z2e--z3{down}..z4e..{up}z5{up}..z6e..{down}z7;
+  pos8(stem,-90); pos9(stem,-90);
+  x8=x7; y8=y1;
+  rt x9=w; y9=y8;
+  filldraw stroke z8e--z9e;
+  penlabels(1,2,3,4,5,6,7,8,9);
+endchar;
+  
+iff known mon_be:
+monchar "be (ligature)";
+beginchar(mon_be,8u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  pos1(stem,-90); pos2(stem,-90);
+  pos3(tiny,180); pos4(stem,90);
+  pos5(tiny,0); pos6(stem,-90);
+  pos7(tiny,180);
+  lft x1=0; y1=.5h;
+  x2=.7w; y2=y1;
+  rt x3=rt x2; y3=y2;
+  x4=.5[x3,x5]; bot y4=.1h;
+  lft x5=0; y5=y1;
+  x6=.5w; top y6l=h;
+  x7=.9w; bot y7=.2h;
+  filldraw stroke z1e--z2e--z3{down}..z4e..{up}z5{up}..z6e..{down}z7;
+  pos8(stem,-90); pos9(stem,-90);
+  x8=x7; y8=y1;
+  rt x9=w; y9=y8;
+  filldraw stroke z8e--z9e;
+  penlabels(1,2,3,4,5,6,7,8,9);
+endchar;
+  
+iff known mon_bi:
+monchar "bi (Ligature)";
+beginchar(mon_bi,13u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  pos1(stem,-90); pos2(stem,-90);
+  pos3(tiny,180); pos4(stem,90);
+  pos5(tiny,0); pos6(stem,-90);
+  pos7(tiny,180);
+  lft x1=0; y1=.5h;
+  x2=5/13w; y2=y1;
+  rt x3=rt x2; y3=y2;
+  x4=.5[x3,x5]; bot y4=.1h;
+  lft x5=0; y5=y1;
+  x6=3/13w; top y6l=h;
+  x7=7/13w; bot y7=.5h;
+  filldraw stroke z1e--z2e--z3{down}..z4e..{up}z5{up}..z6e..{down}z7;
+  pos8(.4stem,-90); pos9(.5stem,-120); pos10(.7stem,-180);
+  lft x8=lft x7; top y8=lft y7l;
+  x9=.5[x8,x10]+u; y9=.5[y8,y10];
+  x10=w-1.2u; bot y10=0;
+  filldraw stroke z8e..z9e..z10e;
+  pos11(stem,-90); pos12(stem,-90);
+  lft x11=lft x7l; y11=.5h;
+  rt x12=w; y12=y11;
+  filldraw stroke z11e--z12e;
+  penlabels(1,2,3,4,5,6,7,8,9,10,11);
+endchar;
+  
+def bo_lig =
+  pos1(stem,-90); pos2(stem,-90);
+  pos3(tiny,180); pos4(stem,90);
+  pos5(tiny,0); pos6(stem,-90);
+  pos7(tiny,180); pos8(stem,90);
+  pos9(tiny,0); pos10(stem,-90);
+  pos11(stem,-90);
+  lft x1=0; y1=.5h;
+  rt x2=(w-2u)/2-.1u; y2=y1;
+  rt x3l=rt x2; y3=y2;
+  x4=.5[x3,x5]; bot y4=.1h;
+  lft x5=0; y5=y1;
+  x6=(w-2u)/2; top y6l=h;
+  x7=w-2u; y7=y2;
+  x8=.5[x7,x9]; bot y8=.1h;
+  lft x9l=(w-2u)/2+.1u; y9=.5h;
+  lft x10=lft x9l; y10=y9;
+  x11=w; y11=.5h;
+  filldraw stroke z1e--z2e--z3{down}..z4e..{up}z5{up}..z6e..{down}z7{down}
+                     ..z8e..{up}z9--z10e--z11e;;
+  penlabels(1,2,3,4,5,6,7,8,9,10,11);
+enddef;
+
+iff known mon_bo:
+monchar "bo (ligature)";
+beginchar(mon_bo,12u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  bo_lig;
+endchar;
+  
+iff known mon_bo.ini:
+monchar "bo (ligature initial form)";
+beginchar(mon_bo.ini,12u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  bo_lig;
+endchar;
+  
+iff known mon_boe:
+monchar "boe (ligature)";
+beginchar(mon_boe,12u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  pos1(stem,-90); pos2(stem,-90);
+  pos3(tiny,180); pos4(stem,90);
+  pos5(tiny,0); pos6(stem,-90);
+  pos7(tiny,180); pos8(stem,90);
+  pos9(tiny,0); pos10(stem,-90);
+  pos11(stem,-90);
+  lft x1=0; y1=.5h;
+  rt x2=(w-2u)/2-.1u; y2=y1;
+  rt x3l=rt x2; y3=y2;
+  x4=.5[x3,x5]; bot y4=.1h;
+  lft x5=0; y5=y1;
+  x6=(w-2u)/2; top y6l=h;
+  x7=w-2u; y7=y2;
+  x8=.5[x7,x9]; bot y8=.1h;
+  lft x9l=(w-2u)/2+.1u; y9=.5h;
+  lft x10=lft x9l; y10=y9;
+  x11=w; y11=.5h;
+  filldraw stroke z1e--z2e--z3{down}..z4e..{up}z5{up}..z6e..{down}z7{down}
+                     ..z8e..{up}z9--z10e--z11e;;
+  penlabels(1,2,3,4,5,6,7,8,9,10,11);
+endchar;
+  
+iff known mon_boe.ini:
+monchar "boe (ligature initial form)";
+beginchar(mon_boe.ini,17u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  pos1(stem,-90); pos2(stem,-90);
+  pos3(tiny,180); pos4(stem,90);
+  pos5(tiny,0); pos6(stem,-90);
+  pos7(tiny,180); pos8(stem,90);
+  pos9(tiny,0); pos10(stem,-90);
+  pos11(stem,-90);
+  lft x1=0; y1=.5h;
+  rt x2=5u-.1u; y2=y1;
+  rt x3l=rt x2; y3=y2;
+  x4=.5[x3,x5]; bot y4=.1h;
+  lft x5=0; y5=y1;
+  x6=5u; top y6l=h;
+  x7=10u; y7=y2;
+  x8=.5[x7,x9]; bot y8=.1h;
+  lft x9l=5u+.1u; y9=.5h;
+  lft x10=lft x9l; y10=y9;
+  x11=12u; y11=.5h;
+  filldraw stroke z1e--z2e--z3{down}..z4e..{up}z5{up}..z6e..{down}z7{down}
+                     ..z8e..{up}z9--z10e--z11e;;
+  shilbe(10u);
+  penlabels(1,2,3,4,5,6,7,8,9,10,11);
+endchar;
+  
+iff known mon_pa:
+monchar "pa (ligature)";
+beginchar(mon_pa,8u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+
+  pos1(tiny,-45); pos2(stem,-80);
+  pos3(stem,-90); pos4(tiny,0);
+  pos5(stem,90); pos6(stem,90);
+  lft x1l=-u; bot y1r=0;
+  x2=u; bot y2=.12h;
+  x3=x4-u; bot y3=.12h;
+  x4=.5w; bot y4=.5[y5,y3];
+  x5=x3; y5=.5h;
+  x6=0; y6=.5h;
+  filldraw stroke z1e..{right}z2e--z3e..z4e..z5e--z6e;
+  pos7(tiny,0); pos8(stem,-90);
+  pos9(tiny,180);
+  x7=.5u; y7=.5h;
+  x8=.5w; top y8l=h;
+  x9=.9w; bot y9=.2h;
+  filldraw stroke z7..z8e{right}..{down}z9;
+
+  pos10(stem,-90); pos11(stem,-90);
+  x10=x9; y10=.5h;
+  rt x11=w; y11=y10;
+  filldraw stroke z10e--z11e;
+  penlabels(1,2,3,4,5,6,7,8,9,10,11);
+endchar;
+
+iff known mon_pe:
+monchar "pe (ligature)";
+beginchar(mon_pe,8u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+
+  pos1(tiny,-45); pos2(stem,-80);
+  pos3(stem,-90); pos4(tiny,0);
+  pos5(stem,90); pos6(stem,90);
+  lft x1l=-u; bot y1r=0;
+  x2=u; bot y2=.12h;
+  x3=x4-u; bot y3=.12h;
+  x4=.5w; bot y4=.5[y5,y3];
+  x5=x3; y5=.5h;
+  x6=0; y6=.5h;
+  filldraw stroke z1e..{right}z2e--z3e..z4e..z5e--z6e;
+  pos7(tiny,0); pos8(stem,-90);
+  pos9(tiny,180);
+  x7=.5u; y7=.5h;
+  x8=.5w; top y8l=h;
+  x9=.9w; bot y9=.2h;
+  filldraw stroke z7..z8e{right}..{down}z9;
+
+  pos10(stem,-90); pos11(stem,-90);
+  x10=x9; y10=.5h;
+  rt x11=w; y11=y10;
+  filldraw stroke z10e--z11e;
+  penlabels(1,2,3,4,5,6,7,8,9,10,11);
+endchar;
+
+iff known mon_pi:
+monchar "pi (Ligature)";
+beginchar(mon_pi,13u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  pos1(tiny,-45); pos2(stem,-80);
+  pos3(stem,-90); pos4(tiny,0);
+  pos5(stem,90); pos6(stem,90);
+  lft x1l=-u; bot y1r=0;
+  x2=u; bot y2=.12h;
+  x3=x4-u; bot y3=.12h;
+  x4=4u; bot y4=.5[y5,y3];
+  x5=x3; y5=.5h;
+  x6=0; y6=.5h;
+  filldraw stroke z1e..{right}z2e--z3e..z4e..z5e--z6e;
+
+  pos7(tiny,0); pos8(stem,-90);
+  pos9(tiny,180);
+  lft x7=0; y7=y6;
+  x8=3/13w; top y8l=h;
+  x9=7/13w; bot y9=.5h;
+  filldraw stroke z7..z8e..{down}z9;
+
+  pos10(.4stem,-90); pos11(.5stem,-120); pos12(.7stem,-180);
+  lft x10=lft x9; top y10=lft y9l;
+  x11=.5[x10,x12]+u; y11=.5[y10,y12];
+  x12=w-1.2u; bot y12=0;
+  filldraw stroke z10e..z11e..z12e;
+
+  pos13(stem,-90); pos14(stem,-90);
+  lft x13=lft x9l; y13=.5h;
+  rt x14=w; y14=y13;
+  filldraw stroke z13e--z14e;
+  penlabels(1,2,3,4,5,6,7,8,9,10,11);
+endchar;
+
+def po_lig =
+  pos1(tiny,-45); pos2(stem,-80);
+  pos3(stem,-90); pos4(tiny,0);
+  pos5(stem,90); pos6(stem,90);
+  pos7(tiny,0); pos8(stem,-90);
+  pos9(tiny,180); pos10(stem,90);
+  pos11(tiny,0); pos12(stem,-90);
+  pos13(stem,-90);
+  lft x1l=-u; bot y1r=0;
+  x2=u; bot y2=.12h;
+  x3=x4-u; bot y3=.12h;
+  x4=.4w; bot y4=.5[y5,y3];
+  x5=x3; y5=.5h;
+  x6=0; y6=.5h;
+  x7=x6; y7=y6;
+  x8=(w-2u)/2; top y8l=h;
+  x9=w-2u; y9=.5h;
+  x10=.5[x9,x11]; bot y10=.1h;
+  lft x11l=(w-2u)/2+.1u; y11=.5h;
+  lft x12=lft x11l; y12=y11;
+  x13=w; y13=.5h;
+  filldraw stroke z1e..{right}z2e--z3e..z4e..z5e--z6e--z7..z8e..{down}z9{down}
+                          ..z10e..{up}z11--z12e--z13e;;
+  pos14(stem,-90); pos15(stem,-90);
+  x14=x9; y14=y6;
+  rt x15=w; y15=y14;
+  filldraw stroke z14e--z15e;
+  penlabels(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15);
+enddef;
+
+iff known mon_po:
+monchar "po (Ligature)";
+beginchar(mon_po,10u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  po_lig;
+endchar;
+  
+iff known mon_po.ini:
+monchar "po (Ligature initial form)";
+beginchar(mon_po.ini,10u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  po_lig;
+endchar;
+  
+iff known mon_poe:
+monchar "poe (Ligature)";
+beginchar(mon_poe,10u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  pos1(tiny,-45); pos2(stem,-80);
+  pos3(stem,-90); pos4(tiny,0);
+  pos5(stem,90); pos6(stem,90);
+  pos7(tiny,0); pos8(stem,-90);
+  pos9(tiny,180); pos10(stem,90);
+  pos11(tiny,0); pos12(stem,-90);
+  pos13(stem,-90);
+  lft x1l=-u; bot y1r=0;
+  x2=u; bot y2=.12h;
+  x3=x4-u; bot y3=.12h;
+  x4=.4w; bot y4=.5[y5,y3];
+  x5=x3; y5=.5h;
+  x6=0; y6=.5h;
+  x7=x6; y7=y6;
+  x8=(w-2u)/2; top y8l=h;
+  x9=w-2u; y9=.5h;
+  x10=.5[x9,x11]; bot y10=.1h;
+  lft x11l=(w-2u)/2+.1u; y11=.5h;
+  lft x12=lft x11l; y12=y11;
+  x13=w; y13=.5h;
+  filldraw stroke z1e..{right}z2e--z3e..z4e..z5e--z6e--z7..z8e..{down}z9{down}
+                          ..z10e..{up}z11--z12e--z13e;;
+  pos14(stem,-90); pos15(stem,-90);
+  x14=x9; y14=y6;
+  rt x15=w; y15=y14;
+  filldraw stroke z14e--z15e;
+  penlabels(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15);
+endchar;
+  
+iff known mon_poe.ini:
+monchar "poe (Ligature linitial form)";
+beginchar(mon_poe.ini,15u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  pos1(tiny,-45); pos2(stem,-80);
+  pos3(stem,-90); pos4(tiny,0);
+  pos5(stem,90); pos6(stem,90);
+  pos7(tiny,0); pos8(stem,-90);
+  pos9(tiny,180); pos10(stem,90);
+  pos11(tiny,0); pos12(stem,-90);
+  pos13(stem,-90);
+  lft x1l=-u; bot y1r=0;
+  x2=u; bot y2=.12h;
+  x3=x4-u; bot y3=.12h;
+  x4=4u; bot y4=.5[y5,y3];
+  x5=x3; y5=.5h;
+  x6=0; y6=.5h;
+  x7=x6; y7=y6;
+  x8=4u; top y8l=h;
+  x9=8u; y9=.5h;
+  x10=.5[x9,x11]; bot y10=.1h;
+  lft x11l=4u+.1u; y11=.5h;
+  lft x12=lft x11l; y12=y11;
+  x13=10u; y13=.5h;
+  filldraw stroke z1e..{right}z2e--z3e..z4e..z5e--z6e--z7..z8e..{down}z9{down}
+                          ..z10e..{up}z11--z12e--z13e;;
+  pos14(stem,-90); pos15(stem,-90);
+  x14=x9; y14=y6;
+  rt x15=10u; y15=y14;
+  filldraw stroke z14e--z15e;
+  shilbe(8u);
+  penlabels(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15);
+endchar;
+  
+iff known mon_ge:
+monchar "ge (Ligature)";
+beginchar(mon_ge,10u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  pos1(stem,60); pos2(.4stem,0);
+  pos3(stem,-90); pos4(tiny,180);
+  x1=x2+2.6u; bot y1l=.1h;
+  lft x2l=0; y2=.5h;
+  x3=.4w; top y3l=h;
+  rt x4l=w-2u; y4=.5h;
+  filldraw stroke z1e..z2e..{right}z3e..{down}z4e;
+  pos5(stem,-90); pos6(stem,-90);
+  lft x5=x4r; y5=.5h;
+  rt x6=w; y6=y5;
+  filldraw stroke z5e--z6e;
+  pos7(stem,0); pos8(tiny,0);
+  lft x7r=x5+.6u; top y7=top y5l;
+  x8=x5; bot y8=.2h;
+  filldraw stroke z7e--z8;
+  penlabels(1,2,3,4,5,6,7,8);
+endchar;
+  
+iff known mon_gi:
+monchar "gi (Ligature)";
+beginchar(mon_gi,13u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  pos1(stem,60); pos2(.4stem,0);
+  pos3(stem,-90); pos4(tiny,180);
+  x1=x2+2.6u; bot y1l=.1h;
+  lft x2l=0; y2=.5h;
+  x3=4u; top y3l=h;
+  rt x4l=8u; y4=.5h;
+  filldraw stroke z1e..z2e..{right}z3e..{down}z4e;
+
+  pos5(.4stem,-90); pos6(.5stem,-120); pos7(.7stem,-180);
+  lft x5=lft x4; top y5=lft y4l;
+  x6=.5[x5,x7]+u; y6=.5[y5,y7];
+  x7=w-1.2u; bot y7=0;
+  filldraw stroke z5e..z6e..z7e;
+  pos8(stem,-90); pos9(stem,-90);
+  lft x8=lft x5l; y8=.5h;
+  rt x9=w; y9=y8;
+  filldraw stroke z8e--z9e;
+  penlabels(1,2,3,4,5,6,7,8,9);
+endchar;
+
+iff known mon_goe:
+monchar "goe (ligature)";
+beginchar(mon_goe,11u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  pos1(stem,45); pos2(.4stem,0);
+  pos3(stem,-90); pos4(tiny,180);
+  pos5(stem,90); pos6(tiny,0);
+  x1=x2+2u; bot y1l=0;
+  lft x2l=0; y2=.5h;
+  x3=5u; top y3l=h;
+  x4=9u; y4=y2;
+  x5=.5[x4,x6]; bot y5=.1h;
+  lft x6l=4u+.1u; y6=.5h;
+  filldraw stroke z1e..z2e..{right}z3e..z4{down}..z5e..{up}z6;
+  pos7(stem,-90); pos8(stem,-90);
+  lft x7=lft x6l; y7=y6;
+  x8=w; y8=.5h;
+  filldraw stroke z7e--z8e;
+  penlabels(1,2,3,4,5,6,7,8);
+endchar;
+
+iff known mon_goe.ini:
+monchar "goe (ligature initial form)";
+beginchar(mon_goe.ini,16u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  pos1(stem,45); pos2(.4stem,0);
+  pos3(stem,-90); pos4(tiny,180);
+  pos5(stem,90); pos6(tiny,0);
+  x1=x2+2u; bot y1l=0;
+  lft x2l=0; y2=.5h;
+  x3=5u; top y3l=h;
+  x4=9u; y4=y2;
+  x5=.5[x4,x6]; bot y5=.1h;
+  lft x6l=4u+.1u; y6=.5h;
+  filldraw stroke z1e..z2e..{right}z3e..z4{down}..z5e..{up}z6;
+  pos7(stem,-90); pos8(stem,-90);
+  lft x7=lft x6l; y7=y6;
+  x8=w; y8=.5h;
+  filldraw stroke z7e--z8e;
+  shilbe(9u);
+  penlabels(1,2,3,4,5,6,7,8);
+endchar;

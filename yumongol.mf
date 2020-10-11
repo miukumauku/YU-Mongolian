@@ -1,0 +1,259 @@
+%%%
+%%% YU-Mongolian alphabet 
+%%%  Driver file
+%%% 
+%%% (c) 1994 and 2020 @miukumauku_
+%%% 
+
+mode_setup; font_setup;
+
+input yumonpun;      % Mongolian punctuation symbols
+input yumoninitial;  % Initial Forms
+input yumonmedial;   % Medial Forms
+input yumonfinal;    % Final Forms
+input yumonligature; % Ligatures
+input yumonisolate;  % Isolate Forms
+
+font_normal_space 6u#+2letter_fit#;
+font_normal_stretch 3u#; font_normal_shrink 2u#;
+font_quad 18u#+4letter_fit#;
+font_extra_space 2u#;
+k#:=-.5u#; kk#:=-1.5u#; kkk#:=-2u#; % three degrees of kerning
+
+%
+boundarychar:=mon_space;
+%
+ligtable mon_a: mon_space =:| mon_a.fin,
+                ":"       =:| mon_a.fin,
+                "."       =:| mon_a.fin,
+                ","       =:| mon_a.fin;
+ligtable mon_a.ini: mon_space =:| mon_a.iso,
+                    ":"       =:| mon_a.iso,
+                    "."       =:| mon_a.iso,
+                    ","       =:| mon_a.iso;
+ligtable mon_e: mon_space =:| mon_e.fin,
+                ":"       =:| mon_e.fin,
+                "."       =:| mon_e.fin,
+                ","       =:| mon_e.fin;
+ligtable mon_e.ini: mon_space =:| mon_e.iso,
+                    ":"       =:| mon_e.iso,
+                    "."       =:| mon_e.iso,
+                    ","       =:| mon_e.iso;
+ligtable mon_i: mon_space =:| mon_i.fin,
+                mon_mvs   =:| mon_i.fin,
+                ":"       =:| mon_i.fin,
+                "."       =:| mon_i.fin,
+                ","       =:| mon_i.fin;
+ligtable mon_i.ini: mon_space =:| mon_i.iso,
+                    ":"       =:| mon_i.iso,
+                    "."       =:| mon_i.iso,
+                    ","       =:| mon_i.iso;
+ligtable mon_o: mon_space =:| mon_o.fin,
+                255       =:| mon_o.fin,
+                ":"       =:| mon_o.fin,
+                "."       =:| mon_o.fin,
+                ","       =:| mon_o.fin;
+ligtable mon_o.ini: mon_space =:| mon_o.iso,
+                    ":"       =:| mon_o.iso,
+                    "."       =:| mon_o.iso,
+                    ","       =:| mon_o.iso;
+ligtable mon_oe: mon_space =:| mon_oe.fin,
+                 ":"       =:| mon_oe.fin,
+                 "."       =:| mon_oe.fin,
+                 ","       =:| mon_oe.fin;
+ligtable mon_oe1: mon_space =:| mon_oe.fin,
+                  ":"       =:| mon_oe.fin,
+                  "."       =:| mon_oe.fin,
+                  ","       =:| mon_oe.fin;
+ligtable mon_oe.ini: mon_space =:| mon_oe.iso,
+                     ":"       =:| mon_oe.iso,
+                     "."       =:| mon_oe.iso,
+                     ","       =:| mon_oe.iso;
+%
+def firstsyllable_oe = 
+  mon_oe |=: mon_oe1;
+enddef;
+
+ligtable mon_n:  "g"       =: mon_ng,
+                 mon_space =:| mon_n.fin,
+                 mon_a     =:| mon_n1,
+                 mon_e     =:| mon_n1,
+                 mon_i     =:| mon_n1,
+                 mon_o     =:| mon_n1,
+                 mon_oe    =:| mon_n1,
+                 ":"       =:| mon_n.fin,
+                 "."       =:| mon_n.fin,
+                 ","       =:| mon_n.fin,
+                 mon_mvs   =:| mon_n.fin1;
+ligtable mon_n.ini: firstsyllable_oe;
+ligtable mon_ng: mon_space =:| mon_ng.fin,
+                 ":"       =:| mon_ng.fin,
+                 "."       =:| mon_ng.fin,
+                 ","       =:| mon_ng.fin;
+ligtable mon_b: mon_a  =: mon_ba,
+                mon_e  =: mon_be,
+                mon_i  =: mon_bi,
+                mon_o  =: mon_bo,
+                mon_oe =: mon_boe,
+                mon_space =:| mon_b.fin,
+                 ":"       =:| mon_b.fin,
+                 "."       =:| mon_b.fin,
+                 ","       =:| mon_b.fin;
+ligtable mon_b.ini: mon_a  =: mon_ba,
+                mon_e  =: mon_be,
+                mon_i  =: mon_bi,
+                mon_o  =: mon_bo.ini,
+                mon_oe =: mon_boe.ini;
+ligtable mon_p: mon_a  =: mon_pa,
+                mon_e  =: mon_pe,
+                mon_i  =: mon_pi,
+                mon_o =: mon_po,
+                mon_oe =: mon_poe;
+ligtable mon_p.ini: mon_a =: mon_pa,
+                mon_e =: mon_pe,
+                mon_i =: mon_pi,
+                mon_o =: mon_po.ini,
+                mon_oe =: mon_poe.ini;
+ligtable mon_q: mon_e =: mon_ge,
+                mon_i =: mon_gi,
+                mon_oe =: mon_goe,
+                mon_mvs =:| mon_q.fin;
+ligtable mon_q.ini: mon_e =: mon_ge,
+                    mon_i =: mon_gi,
+                    mon_oe =: mon_goe.ini;
+ligtable mon_g: mon_a =:| mon_g1,
+                mon_o =: mon_g1,
+                mon_e =: mon_ge,
+                mon_i =: mon_gi,
+                mon_o =:| mon_g1,
+                mon_oe =: mon_goe,
+                mon_space =:| mon_k.fin,
+                ":"       =:| mon_k.fin,
+                "."       =:| mon_k.fin,
+                ","       =:| mon_k.fin,
+                mon_mvs =:| mon_g.fin;
+ligtable mon_g.ini: mon_e =: mon_ge,
+                    mon_i =: mon_gi,
+                    mon_oe =: mon_goe.ini;
+ligtable mon_k: mon_space =:| mon_k.fin,
+                ":"       =:| mon_k.fin,
+                "."       =:| mon_k.fin,
+                ","       =:| mon_k.fin;
+ligtable mon_m: mon_space =:| mon_m.fin,
+                ":"       =:| mon_m.fin,
+                "."       =:| mon_m.fin,
+                ","       =:| mon_m.fin,
+                mon_mvs   =:| mon_m.fin;
+ligtable mon_m.ini: firstsyllable_oe;
+ligtable mon_l: mon_space =:| mon_l.fin,
+                ":"       =:| mon_l.fin,
+                "."       =:| mon_l.fin,
+                ","       =:| mon_l.fin,
+                mon_mvs   =:| mon_l.fin;
+ligtable mon_l.ini: firstsyllable_oe;
+ligtable mon_s: mon_space =:| mon_s.fin,
+                ":"       =:| mon_s.fin,
+                "."       =:| mon_s.fin,
+                ","       =:| mon_s.fin,
+                "h"       =: mon_sh;
+ligtable mon_s.ini: "h" =: mon_sh.ini,
+                    firstsyllable_oe;
+ligtable mon_sh: mon_space =:| mon_sh.fin,
+                ":"       =:| mon_sh.fin,
+                "."       =:| mon_sh.fin,
+                ","       =:| mon_sh.fin;
+ligtable mon_sh.ini: firstsyllable_oe;
+ligtable mon_t: mon_space =:| mon_d.fin,
+                mon_a     =:| mon_d,
+                mon_e     =:| mon_d,
+                mon_i     =:| mon_d,
+                mon_o     =:| mon_d,
+                mon_oe    =:| mon_d,
+                ":"       =:| mon_d.fin,
+                "."       =:| mon_d.fin,
+                ","       =:| mon_d.fin;
+ligtable mon_t.ini: firstsyllable_oe;
+ligtable mon_d: mon_space =:| mon_d.fin,
+                ":"       =:| mon_d.fin,
+                "."       =:| mon_d.fin,
+                ","       =:| mon_d.fin;
+ligtable mon_d.ini: firstsyllable_oe;
+ligtable mon_ch.ini: firstsyllable_oe;
+ligtable mon_j.ini: mon_i kern -u#,
+                    firstsyllable_oe;
+ligtable mon_y.ini: firstsyllable_oe;
+ligtable mon_r: mon_space =:| mon_r.fin,
+                ":"       =:| mon_r.fin,
+                "."       =:| mon_r.fin,
+                ","       =:| mon_r.fin,
+                mon_mvs   =:| mon_r.fin;
+ligtable mon_r.ini: firstsyllable_oe;
+
+%
+ligtable mon_ba: mon_space |=:| mon_e.fin1;
+ligtable mon_be: mon_space |=:| mon_e.fin1;
+ligtable mon_pa: mon_space |=:| mon_e.fin1;
+ligtable mon_pe: mon_space |=:| mon_e.fin1;
+ligtable mon_ge: mon_space |=:| mon_e.fin1;
+
+def rightboundaries =
+  mon_space |=:| mon_o.fin1,
+  "."       |=:| mon_o.fin1,
+  ","       |=:| mon_o.fin1;
+enddef;
+ligtable mon_bi: rightboundaries;
+ligtable mon_boe: rightboundaries;
+ligtable mon_pi: rightboundaries;
+ligtable mon_poe: rightboundaries;
+ligtable mon_gi: rightboundaries;
+ligtable mon_goe: rightboundaries;
+
+ligtable mon_bo.ini: mon_space =: mon_bo.iso,
+                      "."       =: mon_bo.iso,
+                      ","       =: mon_bo.iso;
+ligtable mon_boe.ini: mon_space =: mon_bo.iso,
+                      "."       =: mon_bo.iso,
+                      ","       =: mon_bo.iso;
+ligtable mon_po.ini: mon_space =: mon_po.iso,
+                      "."       =: mon_po.iso,
+                      ","       =: mon_po.iso;
+ligtable mon_poe.ini: mon_space =: mon_po.iso,
+                      "."       =: mon_po.iso,
+                      ","       =: mon_po.iso;
+ligtable mon_goe.ini: mon_space =: mon_goe.iso,
+                      "."       =: mon_goe.iso,
+                      ","       =: mon_goe.iso;
+
+%
+ligtable ||: mon_a  |=: mon_a.ini,
+             mon_e  |=: mon_e.ini,
+             mon_i  |=: mon_i.ini,
+             mon_o  |=: mon_o.ini,
+             mon_oe |=: mon_oe.ini,
+             mon_oe.fin |=: mon_oe.iso,
+             mon_n  |=: mon_n.ini,
+             mon_b  |=: mon_b.ini,
+             mon_bo |=: mon_bo.ini,
+             mon_boe |=: mon_boe.ini,
+             mon_p  |=: mon_p.ini,
+             mon_po |=: mon_po.ini,
+             mon_poe |=: mon_poe.ini,
+             mon_j  |=: mon_j.ini,
+             mon_q  |=: mon_q.ini,
+             mon_g  |=: mon_g.ini,
+             mon_goe |=: mon_goe.ini,
+             mon_k  |=: mon_k.ini,
+             mon_m  |=: mon_m.ini,
+             mon_l  |=: mon_l.ini,
+             mon_s  |=: mon_s.ini,
+             mon_sh |=: mon_sh.ini,
+             mon_t  |=: mon_t.ini;
+%
+ligtable mon_mvs: mon_a     |=: mon_e.fin1,
+                  mon_a.fin |=: mon_e.fin1,
+                  mon_e     |=: mon_e.fin1,
+                  mon_e.fin |=: mon_e.fin1,
+                  mon_y     |=: mon_j.ini;
+
+  
+bye.

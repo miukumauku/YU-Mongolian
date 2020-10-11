@@ -1,0 +1,276 @@
+%%% YU-Mongolian alphabet
+%%%  Final Forms
+%%% 
+%%% (c) 1994 and 2020 @miukumauku_
+%%%
+
+iff known mon_a.fin:
+monchar "a (Final form)";
+beginchar(mon_a.fin,8u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  suul(0);
+endchar;
+  
+iff known mon_e.fin:
+monchar "e (Final form)";
+beginchar(mon_e.fin,8u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  suul(0);
+endchar;
+  
+iff known mon_e.fin1:
+monchar "a|e (Final form for b|p|q|g)";
+beginchar(mon_e.fin1,8u#,cap_height#,desc_depth#+2u#);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  caclaga(0);
+endchar;
+
+iff known mon_i.fin:
+monchar "i (Final form)";
+beginchar(mon_i.fin,8u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  num(0);
+endchar;
+  
+iff known mon_o.fin:
+monchar "o (Final form)";
+beginchar(mon_o.fin,8u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  numtai_gedes(0);
+endchar;
+  
+iff known mon_oe.fin:
+monchar "oe (Final form)";
+beginchar(mon_oe.fin,8u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  numtai_gedes(0);
+endchar;
+
+iff known mon_n.fin:
+monchar "n (Final form)";
+beginchar(mon_n.fin,8u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  suul(0);
+endchar;
+  
+iff known mon_n.fin1:
+monchar "n (Final form) alt";
+beginchar(mon_n.fin1,8u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  suul(0);
+  n_ceg(7u);
+endchar;
+
+iff known mon_ng.fin:
+monchar "ng (Final form)";
+beginchar(mon_ng.fin,16u#,cap_height#,desc_depth#+2u#);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  shud(0);
+  shilbe(3u);
+  caclaga(10u);
+endchar;
+
+iff known mon_y.fin:
+monchar "y (Final form)";
+beginchar(mon_y.fin,8u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  pos1(stem,60); pos2(.4stem,0);
+  pos3(stem,-90); pos4(tiny,180);
+  x1=x2+3.6u; bot y1l=0;
+  lft x2l=0; y2=.5h;
+  x3=.5w; top y3l=h;
+  rt x4l=w; y4=.4h;
+  filldraw stroke z1e--z2e..{right}z3e..{down}z4;
+  penlabels(1,2,3,4,5,6,7,8);
+endchar;
+  
+iff known mon_o.fin1:
+monchar "bi odoi suul";
+beginchar(mon_o.fin1,4u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  odoi_suul(0);
+endchar;
+  
+iff known mon_b.fin:
+monchar "b (Final form)";
+beginchar(mon_b.fin,8u#,cap_height#,desc_depth#);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  pos1(stem,-90); pos2(stem,-90);
+  pos3(tiny,180); pos4(stem,90);
+  pos5(tiny,0); pos6(stem,-90);
+  pos7(tiny,180); pos8(tiny,180); pos9(tiny,160);
+  pos10(tiny,100); pos11(.7stem,100);
+  lft x1=0; y1=.5h;
+  x2=.7*10u-2u; y2=y1;
+  rt x3=rt x2; y3=y2;
+  x4=.5[x3,x5]; bot y4=.1h;
+  lft x5=0; y5=y1;
+  x6=.5*10u-2u; top y6l=h;
+  x7=.9*10u-2u; bot y7=.5h;
+  x8=x7; y8=0;
+  x9=x8-.5u; y9=y10+u;
+  x10=x9-u; bot y10=-d;
+  x11=x10-u; y11=y10;
+  filldraw stroke z1e--z2e--z3{down}..z4e..{up}z5{up}..z6e..z7e---z8e{down}..z9e..z10e--z11e;
+  penlabels(1,2,3,4,5,6,7,8,9,10,11);
+endchar;
+
+iff known mon_q.fin:
+monchar "q (Final form)";
+beginchar(mon_q.fin,9u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  shud(0);
+  suul_mini(0);
+endchar;
+
+iff known mon_g.fin:
+monchar "g (Final form)";
+beginchar(mon_g.fin,9u#,cap_height#,desc_depth#);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  shud(0);
+  suul_mini(0);
+  g_ceg(8u,0);
+endchar;
+
+iff known mon_k.fin:
+monchar "k (Final form)";
+beginchar(mon_k.fin,14u#,cap_height#,desc_depth#+2u#);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  shilbe(0);
+  caclaga(7u);
+endchar;
+
+iff known mon_m.fin:
+monchar "m (Final form)";
+beginchar(mon_m.fin,8u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+% Segül
+  pos1(stem,-90); pos2(stem,-90);
+  lft x1=0; y1=.5h;
+  x2=.3w; y2=y1;
+  filldraw stroke z1e--z2e;
+  pos3(2tiny,-135); pos4(2tiny,-135);
+  x3=x2; y3=y2;
+  x4=.6w; bot y4=0;
+  filldraw stroke z3e--z4e;
+  pos5(2tiny,-45);
+  pos6(stem,-30);
+  pos7(tiny,0);
+  x5=x4; y5=y4;
+  rt x6r=w; y6=.7h;
+  x7=.85w; top y7l=.9h;
+  filldraw stroke z5e{up}..z6e--z7;
+% M-eber
+  pos8(.5tiny,0); pos9(.5tiny,0);
+  z8=z2;
+  x9=x8-u; y9=y8+4.5u;
+  filldraw stroke z8e--z9e;
+  pos10(.7stem,-90); pos11(.5stem,-70); pos12(tiny,-60);
+  lft x10=lft x9l; top y10l=top y9;
+  x11=.6[x10,x12]; y11=y10-.1u;
+  x12=x10+3.5u;
+  top y12=top y9+.4u;
+  filldraw stroke z10e..z11e..z12;
+
+  penlabels(1,2,3,4,5,6,7,8,9,10,11,12);
+endchar;
+
+iff known mon_l.fin:
+monchar "l (Final form)";
+beginchar(mon_l.fin,8u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+% L-Segül
+  pos1(stem,-90); pos2(stem,-90);
+  lft x1=0; y1=.5h;
+  x2=.3w; y2=y1;
+  filldraw stroke z1e--z2e;
+  pos3(2tiny,-135); pos4(2tiny,-135);
+  x3=x2; y3=y2;
+  x4=.6w; bot y4=0;
+  filldraw stroke z3e--z4e;
+  pos5(.7stem,-45); pos6(tiny,-30);
+  x5=x4; y5=y4;
+  rt x6r=w; y6=.9h;
+  filldraw stroke z5e{up}..z6;
+  pos7(.7stem,60); pos8(.5stem,60); pos9(tiny,60);
+  rt x7=rt x6l; top y7r=top y6;
+  x8=.6[x7,x9]; y8=y7-.1u;
+  x9=x7-3.5u; top y9=top y6+.4u;
+  filldraw stroke z7e..z8e..z9;
+
+  penlabels(1,2,3,4,5,6,7,8,9,10,11,12);
+endchar;
+
+iff known mon_t.fin:
+monchar "t/d (Final form)";
+beginchar(mon_t.fin,15u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  gedes(0);
+  suul(7u);
+endchar;
+
+iff known mon_d.fin:
+monchar "t/d (Final form)";
+beginchar(mon_d.fin,15u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  gedes(0);
+  suul(7u);
+endchar;
+
+iff known mon_s.fin:
+monchar "s (Final form)";
+beginchar(mon_s.fin,8u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  suuliin_zawj(0);
+endchar;
+
+iff known mon_sh.fin:
+monchar "sh (Final form)";
+beginchar(mon_sh.fin,8u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  suuliin_zawj(0);
+  dawqar_cegtei(3.8u,h);
+endchar;
+
+iff known mon_r.fin:
+monchar "r (Final form)";
+beginchar(mon_r.fin,8u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  pos1(stem,60); pos2(.4stem,0);
+  pos3(stem,-90); pos4(tiny,180);
+  x1=x2+3.6u; bot y1l=0;
+  lft x2l=0; y2=.5h;
+  x3=.5w; top y3l=h;
+  rt x4l=w; y4=.4h;
+  filldraw stroke z1e--z2e..{right}z3e..{down}z4;
+
+  pos7(.5stem,-45); pos8(tiny,-30);
+  x7=.6[x1,x2]; y7=.6[y1,y2];
+  x8=x7-u; y8=y7-3u;
+  filldraw stroke z7e..z8;
+  penlabels(1,2,3,4,5,6,7,8);
+endchar;
+  
+endinput

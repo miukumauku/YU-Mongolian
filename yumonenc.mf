@@ -1,0 +1,135 @@
+%%%
+%%% YU-Mongolian alphabet
+%%%  Encoding file
+%%% 
+%%% (c) 1994 and 2020 @miukumauku_
+%%%
+
+% Punctuations
+mon_space:=hex"20";    % white space      " "
+mon_comma:=hex"2C";    % :        ,
+mon_period:=hex"2E";   % .        .
+mon_parend:=hex"27";   % -:-       
+
+% Initial Forms
+% Vowels
+mon_a.ini:=hex"41";    % A
+mon_e.ini:=hex"45";    % E
+mon_i.ini:=hex"49";    % I
+mon_o.ini:=hex"4F";    % O (o/u)
+mon_oe.ini:=hex"55";   % U (ö/ü)
+% Basic consonants
+mon_n.ini:=hex"4E";    % N
+mon_b.ini:=hex"42";    % B
+mon_p.ini:=hex"50";    % P
+mon_q.ini:=hex"51";    % Q
+mon_g.ini:=hex"47";    % G
+mon_k.ini:=hex"4B";    % K (Q, G)
+mon_m.ini:=hex"4D";    % M
+mon_l.ini:=hex"4C";    % L
+mon_s.ini:=hex"53";    % S
+mon_sh.ini:=hex"58";   % X
+mon_t.ini:=hex"54";    % T
+mon_d.ini:=hex"44";    % D
+mon_ch.ini:=hex"43";   % C
+mon_j.ini:=hex"4A";    % J
+mon_y.ini:=hex"59";    % Y
+mon_r.ini:=hex"52";    % R
+% Foreign consonants
+mon_f.ini:=hex"46";    % F
+%mon_z.ini:=hex"5A";    % Z
+%mon_h.ini:=hex"48";    % H
+
+% Medium Forms
+% Vowels
+mon_a:=hex"61";    % a
+mon_e:=hex"65";    % e
+mon_i:=hex"69";    % i
+mon_o:=hex"6F";    % o (o/u)
+mon_oe:=hex"75";   % u (ö/ü)
+mon_oe1:=hex"A0";  % u (ö/ü for 1st syllable)
+% Basic consonants
+mon_n:=hex"6E";    % n (without dots)
+mon_n1:=hex"A1";   % n (with a dot)
+mon_ng:=hex"7E";   % ~
+mon_b:=hex"62";    % b
+mon_p:=hex"70";    % p
+mon_q:=hex"71";    % q
+mon_g:=hex"67";    % g (without dots)
+mon_g1:=hex"A2";   % g (with dots)
+mon_k:=hex"6B";    % k (q, g)
+mon_m:=hex"6D";    % m
+mon_l:=hex"6C";    % l
+mon_s:=hex"73";    % s
+mon_sh:=hex"78";  % x
+mon_t:=hex"74";    % t
+mon_d:=hex"64";    % d
+mon_ch:=hex"63";    % c
+mon_j:=hex"6A";    % j
+mon_y:=hex"79";    % y
+mon_r:=hex"72";    % r
+% Foreign consonants
+mon_f:=hex"66";    % f
+mon_z:=hex"7A";    % z
+mon_h:=hex"68";    % h
+
+% Final Forms
+% Vowels
+mon_a.fin:=hex"81";    % a*
+mon_e.fin:=hex"85";    % e*
+mon_i.fin:=hex"89";    % i*
+mon_o.fin:=hex"8F";    % o* (o/u)
+mon_oe.fin:=hex"3F";   % u* (ö/ü)
+mon_y.fin:=hex"99";    % y*
+mon_o.fin1:=hex"9B";   % o w/ tail 
+mon_e.fin1:=hex"9C";   % Orkica
+% Basic consonants
+mon_n.fin:=hex"8E";    % n*
+mon_n.fin1:=hex"9A";   % n*
+mon_ng.fin:=hex"9E";   % ng*
+mon_b.fin:=hex"82";    % b*
+mon_q.fin:=hex"91";    % q* 
+mon_g.fin:=hex"87";    % g* 
+mon_k.fin:=hex"8B";    % k* (g*)
+mon_m.fin:=hex"8D";    % m*
+mon_l.fin:=hex"8C";    % l*
+mon_t.fin:=hex"94";    % t/d*
+mon_d.fin:=hex"84";    % t/d*
+mon_s.fin:=hex"93";    % s*
+mon_sh.fin:=hex"98";   % sh*
+mon_r.fin:=hex"92";    % r*
+
+% Isolation Forms
+mon_a.iso:=hex"F0";
+mon_e.iso:=hex"F1";
+mon_i.iso:=hex"F2";
+mon_o.iso:=hex"F3";
+mon_oe.iso:=hex"F4";
+mon_bo.iso:=hex"F5";
+mon_po.iso:=hex"F6";
+mon_goe.iso:=hex"F7";
+
+% Ligatures
+mon_ba:=hex"00";       % Ba  ba
+mon_be:=hex"01";       % Be  be
+mon_bi:=hex"02";       % Bi  bi
+mon_bo:=hex"03";       % Bo/Bu  bo/bu
+mon_boe:=hex"04";      % bö/bü
+mon_bo.ini:=hex"05";   % Bo=/Bu=
+mon_boe.ini:=hex"06";  % Bö=/Bü=
+mon_pa:=hex"08";       % Pa  pa
+mon_pe:=hex"09";       % Pe  pe
+mon_pi:=hex"0A";       % Pi  pi
+mon_po:=hex"0B";       % Po/Pu  po/pu
+mon_poe:=hex"0C";      % pö/pü
+mon_po.ini:=hex"0D";   % Po=/Pu=
+mon_poe.ini:=hex"0E";  % Pö=/Pü=
+mon_ge:=hex"11";       % Qe  Qe
+mon_gi:=hex"12";       % Qe  Qe
+mon_goe:=hex"14";      % qö/qü
+mon_goe.ini:=hex"16";  % Qö=/Qü=
+
+% Misc.
+mon_mvs:=hex"2D";  % Mongolian Vowel Separator "-"
+
+endinput;

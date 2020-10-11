@@ -1,0 +1,277 @@
+%%% YU-Mongolian alphabet
+%%%  Medial Forms
+%%% 
+%%% (c) 1994 and 2020 @miukumauku_
+%%% 
+
+iff known mon_a:
+monchar "a (Medial form)";
+beginchar(mon_a,3u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  shud(0);
+endchar;
+
+iff known mon_e:
+monchar "e (Medial form)";
+beginchar(mon_e,3u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  shud(0);
+endchar;
+
+iff known mon_i:
+monchar "i (Medial form)";
+beginchar(mon_i,7u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  shilbe(0);
+endchar;
+
+iff known mon_o:
+monchar "o (Medial form)";
+beginchar(mon_o,7u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  gedes(0);
+endchar;
+
+iff known mon_oe:
+monchar "oe (Medial form)";
+beginchar(mon_oe,7u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  gedes(0);
+endchar;
+
+iff known mon_oe1:
+monchar "oe (Medial form)";
+beginchar(mon_oe1,12u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  gedes(0);
+  shilbe(5u);
+endchar;
+
+iff known mon_n:
+monchar "n (Medial form without dots)";
+beginchar(mon_n,3u#,cap_height#,.2desc_depth#);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  shud(0);
+endchar;
+
+iff known mon_n1:
+monchar "n (Medial form with a dot)";
+beginchar(mon_n1,3u#,cap_height#,.2desc_depth#);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  shud(0);
+  n_ceg(0);
+endchar;
+
+iff known mon_ng:
+monchar "ng (Medial form)";
+beginchar(mon_ng,8u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  shud(0);
+  num_mini(3u);
+endchar;
+
+iff known mon_b:
+monchar "b (Medial form)";
+beginchar(mon_b,8u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  numtai_gedes(0);
+endchar;
+
+iff known mon_p:
+monchar "p (Medial form)";
+beginchar(mon_p,8u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  pos1(tiny,-45); pos2(stem,-80);
+  pos3(stem,-90); pos4(tiny,0);
+  pos5(stem,90); pos6(stem,90);
+  pos7(tiny,0); pos8(stem,-90);
+  pos9(tyny,180);
+  lft x1l=-u; bot y1r=0;
+  x2=u; bot y2=.12h;
+  x3=x4-u; bot y3=.12h;
+  x4=.55w; bot y4=.5[y5,y3];
+  x5=x3; y5=.5h;
+  x6=0; y6=.5h;
+  x7=x6; y7=y6;
+  x8=3/8w; top y8l=h;
+  x9=.85w; bot y9=.5h;
+  filldraw stroke z1e..{right}z2e--z3e..z4e..z5e--z6e--z7..z8e..z9;
+  pos10(stem,-90); pos11(stem,-90);
+  x10=x9; y10=y6;
+  rt x11=w; y11=y10;
+  filldraw stroke z10e--z11e;
+  penlabels(1,2,3,4,5,6,7,8,9,10,11);
+endchar;
+
+iff known mon_q:
+monchar "q (Medial form)";
+beginchar(mon_q,6u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  shud(0);
+  shud(3u);
+endchar;
+
+iff known mon_g:
+monchar "g (Medial form without dots)";
+beginchar(mon_g,6u#,cap_height#,desc_depth#);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  shud(0);
+  shud(3u);
+endchar;
+
+iff known mon_g1:
+monchar "g (Medial form with dots)";
+beginchar(mon_g1,6u#,cap_height#,desc_depth#);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  shud(0);
+  shud(3u);
+  g_ceg(0,0);
+endchar;
+
+iff known mon_k:
+monchar "k (Medial form)";
+beginchar(mon_k,8u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  num_mini(0);
+endchar;
+
+iff known mon_m:
+monchar "m (Medial form)";
+beginchar(mon_m,3u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  shud(0);
+  m_ewer(0,.5h);
+endchar;
+
+iff known mon_l:
+monchar "l (Medial form)";
+beginchar(mon_l,3u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  shud(0);
+  l_ewer(0,.5h);
+endchar;
+
+iff known mon_t:
+monchar "t (Medial form)";
+beginchar(mon_t,8u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  gedes(0);
+  shud(7u);
+endchar;
+
+iff known mon_d:
+monchar "d (Medial form)";
+beginchar(mon_d,8u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  gedestei_shilbe;
+endchar;
+
+iff known mon_s:
+monchar "s (Medial form)";
+beginchar(mon_s,7u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  zawj;
+endchar;
+
+iff known mon_sh:
+monchar "sh (Medial form)";
+beginchar(mon_sh,7u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  zawj;
+  dawqar_cegtei(3.3u,h);
+endchar;
+
+iff known mon_j:
+monchar "j (Medial form)";
+beginchar(mon_j,8u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  pos1(stem,-90); pos2(stem,-90);
+  lft x1=0; y1=.5h;
+  rt x2=w; y2=.5h;
+  filldraw stroke z1e--z2e;
+  pos3(tiny,180); pos4(stem,60);
+  rt x3l=rt x2; y3=y2;
+  lft x4=u; bot y4=.1h;
+  filldraw stroke z3..{left}z4e;
+  labels(1,2,3,4);
+endchar;
+
+iff known mon_ch:
+monchar "ch (medial form)";
+beginchar(mon_ch,8u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  seree_ewer;
+endchar;
+
+iff known mon_y:
+monchar "y (Medial form)";
+beginchar(mon_y,6u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  etger_shilbe;
+endchar;
+
+iff known mon_r:
+monchar "r (Medial form)";
+beginchar(mon_r,6u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  erweeljin_shilbe;
+endchar;
+
+iff known mon_f:
+monchar "f (Medial form)";
+beginchar(mon_f,8u#,cap_height#,.7desc_depth#);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  pos1(stem,-90); pos2(stem,-90);
+  pos3(tiny,180); pos4(stem,90);
+  pos5(tiny,0); pos6(stem,-90);
+  pos7(tiny,180);
+  lft x1=0; y1=.5h;
+  x2=5/8w; y2=y1;
+  rt x3=rt x2; y3=y2;
+  x4=.5[x3,x5]; bot y4=.1h;
+  lft x5=0; y5=y1;
+  x6=3/8w; top y6l=h;
+  x7=.85w; bot y7=.5h;
+  filldraw stroke z1e--z2e--z3{down}..z4e..{up}z5{up}..z6e..{down}z7;
+  pos8(stem,-90); pos9(stem,-90);
+  x8=x7; y8=y1;
+  rt x9=w; y9=y8;
+  filldraw stroke z8e--z9e;
+  pos10(tiny,180); pos11(tiny,180);
+  x10=x4; y10=y4;
+  x11=x10; y11=y10-2u;
+  filldraw stroke z10--z11;
+  pos12(tiny,90); pos13(.5stem,135); pos14(tiny,180);
+  x12=x11; y12=y11;
+  x13=x14+.5u; y13=y12-.5u;
+  lft x14r=0; bot y14=-d;
+  filldraw stroke z12..z13e..z14;
+  penlabels(1,2,3,4,5,6,7,8,9,10,11,12,13,14);
+endchar;
+

@@ -1,0 +1,265 @@
+%%% YU-Mongolian alphabet
+%%%  Inital Forms
+%%% 
+%%% (c) 1994, 2020 @miukumauku_
+%%% 
+
+iff known mon_a.ini:
+monchar "a (Initial form)";
+beginchar(mon_a.ini,11u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  titem;
+  shud(8u);
+endchar;
+
+iff known mon_e.ini:
+monchar "e (Initial form)";
+beginchar(mon_e.ini,8u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  titem;
+endchar;
+
+iff known mon_i.ini:
+monchar "i (Initial form)";
+beginchar(mon_i.ini,13u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  titem;
+  shilbe(6u);
+endchar;
+
+iff known mon_o.ini:
+monchar "o (Initial form)";
+beginchar(mon_o.ini,15u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  titem;
+  gedes(8u);
+endchar;
+
+iff known mon_oe.ini:
+monchar "oe (Initial form)";
+beginchar(mon_oe.ini,22u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  titem;
+  gedes(8u);
+  shilbe(15u);
+endchar;
+
+iff known mon_n.ini:
+monchar "n (Initial form)";
+beginchar(mon_n.ini,8u#,cap_height#,.2desc_depth#);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  titem;
+  n_ceg(3u);
+endchar;
+
+iff known mon_b.ini:
+monchar "b (Initial form)";
+beginchar(mon_b.ini,8u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  numtai_gedes(0);
+endchar;
+
+iff known mon_p.ini:
+monchar "p (Initial form)";
+beginchar(mon_p.ini,8u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  pos1(tiny,-45); pos2(stem,-80);
+  pos3(stem,-90); pos4(tiny,0);
+  pos5(stem,90); pos6(stem,90);
+  pos7(tiny,0); pos8(stem,-90);
+  pos9(tyny,180);
+  lft x1l=-u; bot y1r=0;
+  x2=u; bot y2=.12h;
+  x3=x4-u; bot y3=.12h;
+  x4=.55w; bot y4=.5[y5,y3];
+  x5=x3; y5=.5h;
+  x6=0; y6=.5h;
+  x7=x6; y7=y6;
+  x8=3/8w; top y8l=h;
+  x9=.85w; bot y9=.5h;
+  filldraw stroke z1e..{right}z2e--z3e..z4e..z5e--z6e--z7..z8e..z9;
+  pos10(stem,-90); pos11(stem,-90);
+  x10=x9; y10=y6;
+  rt x11=w; y11=y10;
+  filldraw stroke z10e--z11e;
+  penlabels(1,2,3,4,5,6,7,8,9,10,11);
+endchar;
+
+iff known mon_q.ini:
+monchar "q (Initial form)";
+beginchar(mon_q.ini,7u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  xewtee_qix;
+endchar;
+
+iff known mon_g.ini:
+monchar "g (Initial form)";
+beginchar(mon_g.ini,7u#,cap_height#,desc_depth#);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  pos1(stem,-45); pos2(stem,0); pos3(stem,80);
+  xewtee_qix;
+  g_ceg(u,-u);
+endchar;
+
+iff known mon_k.ini:
+monchar "k (Initial form)";
+beginchar(mon_k.ini,8u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  pos1(stem,60); pos2(.4stem,0);
+  pos3(stem,-90); pos4(tiny,180);
+  x1=x2+2.6u; bot y1l=.1h;
+  lft x2l=0; y2=.5h;
+  x3=.5w; top y3l=h;
+  rt x4l=w; y4=.5h;
+  filldraw stroke z1e..z2e..{right}z3e..{down}z4;
+  penlabels(1,2,3,4,5,6,7,8);
+endchar;
+
+iff known mon_m.ini:
+monchar "m (Initial form)";
+beginchar(mon_m.ini,8u#,cap_height#,.2desc_depth#);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  titem;
+  m_ewer(5u,8u);
+endchar;
+
+iff known mon_l.ini:
+monchar "l (Initial form)";
+beginchar(mon_l.ini,8u#,cap_height#,.2desc_depth#);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  titem;
+  l_ewer(5u,8u);
+endchar;
+
+iff known mon_s.ini:
+monchar "s (Initial form)";
+beginchar(mon_s.ini,10u#,cap_height#,.2desc_depth#);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  exen_zawj;
+endchar;
+
+iff known mon_sh.ini:
+monchar "sh (Initial form)";
+beginchar(mon_sh.ini,10u#,cap_height#,.2desc_depth#);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  exen_zawj;
+  dawqar_cegtei(6.5u,h);
+endchar;
+
+
+iff known mon_t.ini:
+monchar "t (Initial form)";
+beginchar(mon_t.ini,9u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  pos1(tiny,0); pos2(.6stem,100); pos3(tiny,0);
+  lft x1=0.5u; y1=.5h+u;
+  x2=.7[x1,x3]; y2=.4h;
+  x3=6u; y3=y1;
+  filldraw stroke z1..z2e..z3;
+  pos4(tiny,10); pos5(.6stem,-100); pos6(tiny,0);
+  lft x4=0; y4=.5h+u;
+  x5=.4[x4,x6]; y5=.75h;
+  x6=6u; y6=y4;
+  filldraw stroke z4..z5e..z6;
+  %
+  pos7(stem,-90); pos8(stem,-90);
+  lft x7=6u; y7=.5h;
+  rt x8=w; y8=y7;
+  filldraw stroke z7e--z8e;
+  pos9(stem,0); pos10(tiny,0);
+  lft x9r=x7+.5u; top y9=top y7l;
+  x10=x9; bot y10=.1h;
+  filldraw stroke z9e--z10;
+  penlabels(1,2,3,4,5,6,7,8,9,10);
+endchar;
+
+iff known mon_d.ini:
+monchar "d (Initial form)";
+beginchar(mon_d.ini,8u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  gedestei_shilbe;
+endchar;
+
+iff known mon_j.ini:
+monchar "j (Initial form)";
+beginchar(mon_j.ini,7u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  shilbe(0);
+endchar;
+
+iff known mon_y.ini:
+monchar "y (initial form)";
+beginchar(mon_y.ini,6u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  etger_shilbe;
+endchar;
+
+iff known mon_ch.ini:
+monchar "ch (Initial form)";
+beginchar(mon_ch.ini,8u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  seree_ewer;
+endchar;
+
+iff known mon_r.ini:
+monchar "r (Initial form)";
+beginchar(mon_r.ini,6u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  erweeljin_shilbe;
+endchar;
+
+%% For foreign words
+iff known mon_f.ini:
+monchar "f (Initial form)";
+beginchar(mon_f.ini,10u#,cap_height#,.7desc_depth#);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  pos1(stem,-90); pos2(stem,-90);
+  pos3(tiny,180); pos4(stem,90);
+  pos5(tiny,0); pos6(stem,-90);
+  pos7(tiny,180);
+  lft x1=2u; y1=.5h;
+  x2=.7w; y2=y1;
+  rt x3=rt x2; y3=y2;
+  x4=.5[x3,x5]; bot y4=.1h;
+  lft x5=2u; y5=y1;
+  x6=.5w; top y6l=h;
+  x7=.9w; bot y7=.5h;
+  filldraw stroke z1e--z2e--z3{down}..z4e..{up}z5{up}..z6e..{down}z7;
+  pos8(stem,-90); pos9(stem,-90);
+  x8=x7; y8=y1;
+  rt x9=w; y9=y8;
+  filldraw stroke z8e--z9e;
+  pos10(tiny,180); pos11(tiny,180);
+  x10=x4; y10=y4;
+  x11=x10; y11=y10-2u;
+  filldraw stroke z10--z11;
+  pos12(tiny,90); pos13(.5stem,135); pos14(tiny,180);
+  x12=x11; y12=y11;
+  x13=x14+.5u; y13=y12-.5u;
+  lft x14r=2u; bot y14=-d;
+  filldraw stroke z12..z13e..z14;
+  penlabels(1,2,3,4,5,6,7,8,9,10,11,12,13,14);
+endchar;
+

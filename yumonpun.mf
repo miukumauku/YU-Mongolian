@@ -1,0 +1,82 @@
+%%%
+%%% YU-Mongolian alphabet
+%%%  Punctuations
+%%%
+%%% (c) 1994 and 2020 @miukumauku_
+%%%
+
+beginchar(34,6u#,cap_height#,0);
+endchar;
+
+iff known mon_space:
+monchar "Space";
+beginchar(mon_space,6u#,cap_height#,0);
+endchar;
+
+iff known mon_mvs:
+monchar "Mongolial Vowel Separator";
+beginchar(mon_mvs,u#,cap_height#,0);
+endchar;
+
+beginchar(hex"22",0,0,0);
+endchar;
+
+iff known mon_comma:
+monchar "Cheg (Mongolian Comma . )";
+beginchar(mon_comma,12u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  pos1(fine,180); pos2(1.5stem,180); pos3(fine,180);
+  x1=.5w; top y1=y2+2stem;
+  x2=.5w; y2=.5h;
+  x3=.5w; bot y3=y2-2stem;
+  filldraw stroke z1--z2e--z3;
+  labels(1,2,3);
+endchar;
+  
+iff known mon_period:
+monchar "Dabxur cheg (Mongolian Period : )";
+beginchar(mon_period,16u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  pos1(fine,180); pos2(1.5stem,180); pos3(fine,180);
+  x1=x2; top y1=y2+2stem;
+  x2=.5w-1.5u; y2=.5h;
+  x3=x2; bot y3=y2-2stem;
+  filldraw stroke z1--z2e--z3;
+  pos4(fine,180); pos5(1.5stem,180); pos6(fine,180);
+  x4=x5; top y4=y5+2stem;
+  x5=.5w+1.5u; y5=.5h;
+  x6=x5; bot y6=y5-2stem;
+  filldraw stroke z4--z5e--z6;
+  labels(1,2,3,4,5,6);
+endchar;
+  
+iff known mon_parend:
+monchar "Dörbeljin cheg; badagh (Mongolian Paragraph end mark -:- )";
+beginchar(mon_parend,16u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  pos1(fine,180); pos2(1.5stem,180); pos3(fine,180);
+  x1=x2; top y1=y2+2stem;
+  x2=.5w-2u; y2=.5h;
+  x3=x2; bot y3=y2-2stem;
+  filldraw stroke z1--z2e--z3;
+  pos4(fine,180); pos5(1.5stem,180); pos6(fine,180);
+  x4=x5; top y4=y5+2stem;
+  x5=.5w+2u; y5=.5h;
+  x6=x5; bot y6=y5-2stem;
+  filldraw stroke z4--z5e--z6;
+  pos7(fine,180); pos8(1.5stem,180); pos9(fine,180);
+  x7=x8; top y7=y8+2stem;
+  x8=.5w; y8=y1+u;
+  x9=x8; bot y9=y8-2stem;
+  filldraw stroke z7--z8e--z9;
+  pos10(fine,180); pos11(1.5stem,180); pos12(fine,180);
+  x10=x11; top y10=y11+2stem;
+  x11=.5w; y11=y3-u;
+  x12=x11; bot y12=y11-2stem;
+  filldraw stroke z10--z11e--z12;
+  labels(1,2,3,4,5,6,7,8,9,10,11,12);
+endchar;
+  

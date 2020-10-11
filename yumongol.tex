@@ -1,0 +1,97 @@
+\documentclass{article}
+
+\usepackage{fontspec}
+\usepackage{ebgaramond}
+
+\begin{document}
+\newfont{\mon}{yumongol10 scaled \magstep0}
+
+\section*{Mongolian script \mon{Monggol bicig}}
+\begin{table}[h]
+  \begin{tabular}{c||c||c|c|c|c}
+    phoneme & type   & iso.    & ini.     & med.      & fin. \\
+    a       & \tt a  & \mon a  & \mon a=  & \mon =a=  & \mon =a =-a \\
+    e       & \tt e  & \mon e  & \mon e=  & \mon =e=  & \mon =e =-e \\
+    i       & \tt i  & \mon i  & \mon i=  & \mon =i=  & \mon =i \\
+    o/u     & \tt o  & \mon o  & \mon o=  & \mon =o=  & \mon =o \\
+    ö/ü    & \tt u  & \mon u  & \mon u=  & \mon =u= \char"A0 & \mon =u \\
+    n       & \tt n  & \mon    & \mon n=  & \mon =n= \char"A1 & \mon =n =n- \\
+    ŋ      & \tt ng & \mon    & \mon     & \mon =ng= & \mon =ng \\
+    b       & \tt b  & \mon    & \mon b=  & \mon =b=  & \mon =b \\
+    p       & \tt p  & \mon    & \mon p=  & \mon =p=  & \\
+    q       & \tt q  & \mon    & \mon q=  & \mon =q=  & \mon =q- \\
+    γ      & \tt g  & \mon    & \mon g=  & \mon =g= \char"A2 & \mon =g- \char"91\\
+   (k       & \tt k  & \mon    & \mon k=  & \mon =k=  & \mon{ =k } ) \\
+    m       & \tt m  & \mon    & \mon m=  & \mon =m=  & \mon =m \\
+    l       & \tt l  & \mon    & \mon l=  & \mon =l=  & \mon =l \\
+    s       & \tt s  & \mon    & \mon s=  & \mon =s=  & \mon =s \\
+    š       & \tt sh & \mon    & \mon sh= & \mon =sh= & \mon =sh \\
+    t       & \tt t  & \mon    & \mon t=  & \mon =t=  & \\
+    d       & \tt d  & \mon    & \mon d=  & \mon =d=  & \mon =d \\
+    č       & \tt c  & \mon    & \mon c=  & \mon =c=  & \\
+    ǰ       & \tt j  & \mon    & \mon j=  & \mon =j=  & \\
+    y       & \tt y  & \mon    & \mon y=  & \mon =y=  & \\
+    r       & \tt r  & \mon    & \mon r=  & \mon =r=  & \mon =r \\
+  \end{tabular}
+\end{table}
+
+\newpage
+
+\section*{One Syllable Table}
+\begin{table}[h]
+  \begin{tabular}{|c||c|c|c|c|c|}
+       &      a   &       e   &       i   &      o/u & ö/ü     \\
+       & \mon a   & \mon  e   & \mon  i   & \mon o   & \mon u   \\
+    n  & \mon na  & \mon  ne  & \mon  ni  & \mon no  & \mon nu  \\
+    b  & \mon ba  & \mon  be  & \mon  bi  & \mon bo  & \mon bu  \\
+    p  & \mon pa  & \mon  pe  & \mon  pi  & \mon po  & \mon pu  \\
+    q  & \mon qa  & \mon  qe  & \mon  qi  & \mon qo  & \mon qu  \\
+    g  & \mon ga  & \mon  ge  & \mon  gi  & \mon go  & \mon gu  \\
+    m  & \mon ma  & \mon  me  & \mon  mi  & \mon mo  & \mon mu  \\
+    l  & \mon la  & \mon  le  & \mon  li  & \mon lo  & \mon lu  \\
+    s  & \mon sa  & \mon  se  & \mon  si  & \mon so  & \mon su  \\
+    š & \mon sha & \mon  she & \mon  shi & \mon sho & \mon shu \\
+    t  & \mon ta  & \mon  te  & \mon  Ti  & \mon to  & \mon tu  \\
+    č  & \mon ca  & \mon  ce  & \mon  ci  & \mon co  & \mon cu  \\
+    ǰ  & \mon ja  & \mon  je  & \mon  ji  & \mon jo  & \mon ju  \\
+    y  & \mon ya  & \mon  ye  & \mon  yi  & \mon yo  & \mon yu  \\
+    r  & \mon ra  & \mon  re  & \mon  ri  & \mon ro  & \mon ru  \\
+  \end{tabular}
+\end{table}
+
+\section*{Ligatures}
+\begin{table}[h]
+  \begin{tabular}{|c||c|c|c|c|}
+           & ini.     & med.      & fin.     & iso.  \\
+    ba     & \mon ba= & \mon =ba= & \mon =ba & \mon ba \\
+    be     & \mon be= & \mon =be= & \mon =be & \mon be \\
+    bi     & \mon bi= & \mon =bi= & \mon =bi & \mon bi \\
+    bo/bu  & \mon bo= & \mon =bo= & \mon =bo & \mon bo \\
+    bö/bü & \mon bu= & \mon =bu= & \mon =bu & \mon bu \\
+    pa     & \mon pa= & \mon =pa= & \mon =pa & \mon pa \\
+    pe     & \mon pe= & \mon =pe= & \mon =pe & \mon pe \\
+    pi     & \mon pi= & \mon =pi= & \mon =pi & \mon pi \\
+    po/pu  & \mon po= & \mon =po= & \mon =po & \mon po \\
+    pö/bü & \mon pu= & \mon =pu= & \mon =pu & \mon pu \\
+    ge     & \mon ge= & \mon =ge= & \mon =ge & \mon ge \\
+    gi     & \mon gi= & \mon =gi= & \mon =gi & \mon gi \\
+    gö/gü & \mon gu= & \mon =gu= & \mon =gu & \mon gu \\
+  \end{tabular}
+\end{table}
+
+\newpage
+
+\section*{Sample text}
+\begin{mon}
+  qulun bur turuju mendulequ do \\
+  erqe ciluqedei, adaliqan nar-a \\
+  turu tai, ijil erqedei bayidag. \\
+  oyon oqagan, nandin cinar \\
+  jayagaqsan qumun qeqci uqer-e \\
+  qogorondo ban aqan tequu jin \\
+  ujel sanagan jinr qaricaqo \\
+  ocirdai. \\
+\end{mon}
+
+\end{document}
+

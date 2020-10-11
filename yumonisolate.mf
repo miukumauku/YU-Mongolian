@@ -1,0 +1,158 @@
+%%% YU-Mongolian alphabet
+%%%  Isolate Glyphs
+%%% 
+%%% (c) 2020 @miukumauku_
+%%% 
+
+iff known mon_a.iso:
+monchar "a (Isolate form)";
+beginchar(mon_a.iso,14u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  titem;
+  suul(8u);
+endchar;
+
+iff known mon_e.iso:
+monchar "e (Isolate form)";
+%beginchar(mon_e.iso,14u#,cap_height#,desc_depth#+2u#);
+beginchar(mon_e.iso,16u#,cap_height#,desc_depth#+2u#);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  titem;
+  caclaga(8u);
+endchar;
+
+iff known mon_i.iso:
+monchar "i (Isolate form)";
+beginchar(mon_i.iso,16u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  titem;
+  num(8u);
+endchar;
+
+iff known mon_o.iso:
+monchar "o (Isolate form)";
+beginchar(mon_o.iso,14u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  pos1(tiny,-70); pos2(stem,45); pos3(stem,0); pos4(tiny,0);
+  %lft x1l=2u; y1=y2-u;
+  lft x1l=0; y1=y2-u;
+  x2=x1+2u; top y2l=.8h;
+  %x3=.4w; y3=.5h;
+  x3=.4*18u-2u; y3=.5h;
+  x4=x3-u; bot y4=.2h;
+  filldraw stroke z1..z2e..z3e..z4;
+  pos5(stem,-90); pos6(stem,-90);
+  lft x5=lft x3; y5=y3;
+  rt x6=w; y6=y5;
+  filldraw stroke z5e--z6e;
+  pos7(tiny,180); pos8(stem,-90); pos9(tiny,0);
+  %x7=.55w; top y7=lft y6l;
+  x7=.55*18u-2u; top y7=lft y6l;
+  x8=.5[x7,x9]; bot y8=.1h;
+  %x9=.85w; top y9=lft y6l;
+  x9=.85*18u-2u; top y9=lft y6l;
+  filldraw stroke z7e{down}..z8e..{up}z9e;
+  penlabels(1,2,3,4,5,6,7,8,9);
+endchar;
+
+iff known mon_oe.iso:
+monchar "oe (Initial form)";
+beginchar(mon_oe.iso,19u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  titem;
+  gedes(8u);
+  odoi_suul(15u);
+endchar;
+
+iff known mon_bo.iso:
+monchar "bo (Isolate form)";
+beginchar(mon_bo.iso,10u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  pos1(stem,-90); pos2(stem,-90);
+  pos3(tiny,180); pos4(stem,90);
+  pos5(tiny,0); pos6(stem,-90);
+  pos7(tiny,180); pos8(stem,90);
+  pos9(tiny,0); pos10(stem,-90);
+  pos11(stem,-90);
+  lft x1=0; y1=.5h;
+  rt x2=5u-.1u; y2=y1;
+  rt x3l=rt x2; y3=y2;
+  x4=.5[x3,x5]; bot y4=.1h;
+  lft x5=0; y5=y1;
+  x6=5u; top y6l=h;
+  x7=10u; y7=y2;
+  x8=.5[x7,x9]; bot y8=.1h;
+  lft x9l=5u+.1u; y9=.5h;
+  lft x10=lft x9l; y10=y9;
+  x11=10u; y11=.5h;
+  filldraw stroke z1e--z2e--z3{down}..z4e..{up}z5{up}..z6e..{down}z7{down}
+                     ..z8e..{up}z9--z10e--z11e;;
+  penlabels(1,2,3,4,5,6,7,8,9,10,11);
+endchar;
+
+iff known mon_po.iso:
+monchar "po (Isolate form)";
+beginchar(mon_po.iso,8u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  pos1(tiny,-45); pos2(stem,-80);
+  pos3(stem,-90); pos4(tiny,0);
+  pos5(stem,90); pos6(stem,90);
+  pos7(tiny,0); pos8(stem,-90);
+  pos9(tiny,180); pos10(stem,90);
+  pos11(tiny,0); pos12(stem,-90);
+  pos13(stem,-90);
+  lft x1l=-u; bot y1r=0;
+  x2=u; bot y2=.12h;
+  x3=x4-u; bot y3=.12h;
+  x4=4u; bot y4=.5[y5,y3];
+  x5=x3; y5=.5h;
+  x6=0; y6=.5h;
+  x7=x6; y7=y6;
+  x8=4u; top y8l=h;
+  x9=8u; y9=.5h;
+  x10=.5[x9,x11]; bot y10=.1h;
+  lft x11l=(w-2u)/2+.1u; y11=.5h;
+  lft x12=lft x11l; y12=y11;
+  x13=8u; y13=.5h;
+  filldraw stroke z1e..{right}z2e--z3e..z4e..z5e--z6e--z7..z8e..{down}z9{down}
+                          ..z10e..{up}z11--z12e--z13e;;
+  pos14(stem,-90); pos15(stem,-90);
+  x14=x9; y14=y6;
+  rt x15=8u; y15=y14;
+  filldraw stroke z14e--z15e;
+  penlabels(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15);
+endchar;
+
+def goe_fin =
+  pos1(stem,45); pos2(.4stem,0);
+  pos3(stem,-90); pos4(tiny,180);
+  pos5(stem,90); pos6(tiny,0);
+  x1=x2+2u; bot y1l=0;
+  lft x2l=0; y2=.5h;
+  x3=5u; top y3l=h;
+  x4=9u; y4=y2;
+  x5=.5[x4,x6]; bot y5=.1h;
+  lft x6l=4u+.1u; y6=.5h;
+  filldraw stroke z1e..z2e..{right}z3e..z4{down}..z5e..{up}z6;
+  pos7(stem,-90); pos8(stem,-90);
+  lft x7=lft x6l; y7=y6;
+  x8=w; y8=.5h;
+  filldraw stroke z7e--z8e;
+  penlabels(1,2,3,4,5,6,7,8);
+enddef;
+
+iff known mon_goe.iso:
+monchar "goe (Isolate form)";
+beginchar(mon_goe.iso,9u#,cap_height#,0);
+  adjust_fit(0,0);
+  pickup pencircle scaled bar;
+  goe_fin;
+endchar;
+
